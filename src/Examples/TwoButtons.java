@@ -14,12 +14,11 @@ public class TwoButtons implements ActionListener {
 
 	
 	}
+	
 	public TwoButtons() {
-		JButton button1 = null;
-		JButton button2 = null;
 		
 		//create a new JFrame 
-				JFrame myFrame = new JFrame();
+				myFrame = new JFrame();
 				// set the frame title , size ,location 
 				myFrame.setTitle("Two Buttons");
 				myFrame.setSize(500,150);
@@ -31,15 +30,19 @@ public class TwoButtons implements ActionListener {
 				FlowLayout mylayout = new FlowLayout();
 			    myFrame.setLayout(mylayout);
 			    // create and add buttons to the frame 
-			    JButton redButton = new JButton("Red");
-			    JButton greenButton = new JButton("Green");
+			    redButton = new JButton("Red");
+			    greenButton = new JButton("Green");
+				greenButton.addActionListener(this);
+				redButton.addActionListener(this);
 			    myFrame.add(redButton);
 			    myFrame.add(greenButton);
 			    // make frame visible 
 			    myFrame.setVisible(true);
 			    
 	}
-	public void actionPrformed(ActionEvent event) {
+
+
+	public void actionPerformed(ActionEvent event) {
 		Object control = event.getSource();
 		
 		// if redButton was clicked
@@ -50,23 +53,11 @@ public class TwoButtons implements ActionListener {
 		// else if greenButton was clicked 
 		else if ( control ==greenButton ) {
 			myFrame.getContentPane().setBackground(Color.green);
-	}
-	
-		 redButton = new JButton("Red");
-		 greenButton = new JButton("Green");
-		 myFrame.add(redButton);
-		 myFrame.add(greenButton);
-		 // link button to our actionPerformed() function 
-		 redButton.
-		 greenButton. 
-		 
+		
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent event) {
-		// TODO Auto-generated method stub
-	}
+	
 	
 	}
 
-
+}
