@@ -27,15 +27,23 @@ public class TwoButtons implements ActionListener {
 				myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 			   // assign a layout
-				FlowLayout mylayout = new FlowLayout();
-			    myFrame.setLayout(mylayout);
+				//FlowLayout mylayout = new FlowLayout();
+				//GridLayout myLayout = new GridLayout(3,2);
+				JPanel myPanel = (JPanel)myFrame.getContentPane();
+				BoxLayout my
+				
+			    myFrame.setLayout(myLayout);
 			    // create and add buttons to the frame 
 			    redButton = new JButton("Red");
 			    greenButton = new JButton("Green");
 				greenButton.addActionListener(this);
 				redButton.addActionListener(this);
 			    myFrame.add(redButton);
-			    myFrame.add(greenButton);
+			  //  myFrame.add(new JLabel(""));
+			   // myFrame.add(new JLabel(""));
+			   // myFrame.add(new JLabel(""));
+			    //myFrame.add(new JLabel(""));
+			    //myFrame.add(greenButton);
 			    // make frame visible 
 			    myFrame.setVisible(true);
 			    
