@@ -29,8 +29,11 @@ public class TwoButtons implements ActionListener {
 			   // assign a layout
 				//FlowLayout mylayout = new FlowLayout();
 				//GridLayout myLayout = new GridLayout(3,2);
-				JPanel myPanel = (JPanel)myFrame.getContentPane();
-				BoxLayout my
+				//JPanel myPanel = (JPanel)myFrame.getContentPane();
+				//BoxLayout myLayout = new BoxLayout(myPanel ,BoxLayout.Y_AXIS);
+				BorderLayout myLayout = new BorderLayout();
+				
+				
 				
 			    myFrame.setLayout(myLayout);
 			    // create and add buttons to the frame 
@@ -38,12 +41,12 @@ public class TwoButtons implements ActionListener {
 			    greenButton = new JButton("Green");
 				greenButton.addActionListener(this);
 				redButton.addActionListener(this);
-			    myFrame.add(redButton);
+			    myFrame.add(redButton,BorderLayout.LINE_START);
 			  //  myFrame.add(new JLabel(""));
 			   // myFrame.add(new JLabel(""));
 			   // myFrame.add(new JLabel(""));
 			    //myFrame.add(new JLabel(""));
-			    //myFrame.add(greenButton);
+			   myFrame.add(greenButton ,BorderLayout.LINE_END);
 			    // make frame visible 
 			    myFrame.setVisible(true);
 			    
